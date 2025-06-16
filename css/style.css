@@ -1,0 +1,239 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Schriften */
+html {
+    font-family: var(--body-text);
+    /* 16px = 100% (default Einstellung
+    /* 20px = 125% = 1rem*/
+    font-size: 125%;
+    line-height: 150%;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 3.375rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: var(--subheadings);
+    font-weight: var(--fw-400);
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+}
+
+h1,
+h2,
+h4 {
+    font-family: var(--display-text);
+}
+
+h1,
+h2,
+h4 {
+    line-height: 120%;
+}
+
+/* Abstände */
+/* Vertikal */
+.py-1 {
+    padding-top: var(--p-1);
+    padding-bottom: var(--p-1);
+}
+
+.py-2 {
+    padding-top: var(--p-2);
+    padding-bottom: var(--p-2);
+}
+
+.py-3 {
+    padding-top: var(--p-3);
+    padding-bottom: var(--p-3);
+}
+
+.py-4 {
+    padding-top: var(--p-4);
+    padding-bottom: var(--p-4);
+}
+
+/* Horizontal */
+.px-1 {
+    padding-left: var(--p-1);
+    padding-right: var(--p-1);
+}
+
+.px-2 {
+    padding-left: var(--p-2);
+    padding-right: var(--p-2);
+}
+
+.px-3 {
+    padding-left: var(--p-3);
+    padding-right: var(--p-3);
+}
+
+.px-4 {
+    padding-left: var(--p-4);
+    padding-right: var(--p-4);
+}
+
+/* Bilder responsiv */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Schriftformatierung */
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+/* Links */
+a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Buttons */
+.buttons {
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.ctc-btn a {
+    /* Normale Schriftbreite */
+    font-weight: normal;
+    /* Entfernt die Unterstreichung */
+    text-decoration: none;
+}
+
+.law-btn a {
+    /* Normale Schriftbreite */
+    font-weight: normal;
+    /* Entfernt die Unterstreichung */
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+}
+
+a:hover,
+.buttons:hover {
+    filter: brightness(80%);
+    text-decoration: underline;
+}
+
+a:has(i) {
+    line-height: 0;
+}
+
+/* Icons */
+i {
+    font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media screen and (width <=992px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+/* Newsletter */
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.newsletter {
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkboxes {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.checkbox-1,
+.checkbox-2 {
+    gap: 0.8rem;
+    accent-color: gray;
+}
+
+.anmelden {
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.anmelden div {
+    flex-direction: column;
+}
+
+.anmelden input[type="email"] {
+    width: 24rem;
+    height: 2.4rem;
+}
+
+.anmelden input[type="submit"] {
+    height: 2.4rem;
+    line-height: 0;
+}
+
+/* focus states */
+input[type="email"]:focus {
+    border: 1px solid white;
+    outline: 3px solid var(--primary);
+}
